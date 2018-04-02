@@ -212,37 +212,6 @@ describe('LINKED LIST', () => {
     });
   });
 
-  describe.skip('LAST NODE', () => {
-    context('with several nodes', () => {
-      beforeEach(() => {
-        list.push('The');
-        list.push('rain');
-        list.push('in');
-        list.push('Spain');
-      });
-
-      it('finds the last node', () => {
-        expect(list.getLast().data).to.eq('Spain');
-      });
-    });
-
-    context('with one node', () => {
-      beforeEach(() => {
-        list.push('Ahoy!');
-      });
-
-      it('finds the only node', () => {
-        expect(list.getLast().data).to.eq('Ahoy!');
-      });
-    });
-
-    context('with no nodes', () => {
-      it('returns null', () => {
-        expect(list.getLast()).to.eq(null);
-      });
-    });
-  });
-
   describe('DELETE', () => {
     it('deletes a solo node', () => {
       list.push('hello');
