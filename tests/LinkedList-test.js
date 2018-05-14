@@ -82,13 +82,6 @@ describe('LINKED LIST', () => {
       expect(list.length).to.eq(1);
     });
 
-    it('should increment the length count', () => {
-      list.push('duck');
-      list.push('goose');
-      list.push('swan');
-      expect(list.length).to.eq(3);
-    });
-
     it('should assign the head to the first element pushed', () => {
       expect(list.head).to.eq(null);
 
@@ -139,7 +132,7 @@ describe('LINKED LIST', () => {
       expect(list.length).to.eq(0);
     });
 
-    it('should set the list head to null', () => {
+    it('should set the list head to null when there is only one node', () => {
       list.push('duck');
       let result = list.pop();
 
@@ -151,16 +144,6 @@ describe('LINKED LIST', () => {
       const result = list.pop();
 
       expect(result.data).to.eq('duck');
-    });
-
-    it('should return the last element from the list', () => {
-      list.push("duck");
-      list.push("goose");
-      list.push("swan");
-      list.push("southern screamer");
-
-      const output = list.pop();
-      expect(output.data).to.eq('southern screamer');
     });
 
     it('should remove the last element from the list', () => {
@@ -196,13 +179,6 @@ describe('LINKED LIST', () => {
 
       expect(result.data).to.eq('hello');
       expect(result.next.data).to.eq('world');
-    });
-
-    it('should return true the node if node in list', () => {
-      const result = list.find('world');
-
-      expect(result.data).to.eq('world');
-      expect(result.next).to.eq(null);
     });
 
     it('should return null if node is missing', () => {
