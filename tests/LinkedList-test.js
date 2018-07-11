@@ -71,7 +71,7 @@ describe('LINKED LIST', () => {
     })
   })
 
-  describe.skip('PUSH', () => {
+  describe('PUSH', () => {
     it('should push a single element to a list', () => {
       list.push('duck');
       expect(list.head.data).to.eq('duck');
@@ -111,7 +111,7 @@ describe('LINKED LIST', () => {
     });
   });
 
-  describe.skip('POP', () => {
+  describe('POP', () => {
     it('should return null if nothing in list', () => {
       expect(list.length).to.eq(0);
       expect(list.pop()).to.eq(null);
