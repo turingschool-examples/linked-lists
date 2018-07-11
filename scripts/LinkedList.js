@@ -47,4 +47,35 @@ export default class LinkedList {
 
     return currNode;
   }
+
+  find(data) {
+    let foundNode = null;
+    let currNode = this.head;
+
+    while (currNode) {
+      if (currNode.data === data) {
+        foundNode = currNode;
+        break;
+      } else {
+        currNode = currNode.next;
+      }
+    }
+
+    return foundNode;
+  }
+
+  toArray() {
+    let array = [];
+    let currNode = this.head;
+
+    while (currNode) {
+      // add data to array
+      array.push(currNode.data);
+
+      // go to the next node
+      currNode = currNode.next;
+    }
+
+    return array;
+  }
 }
