@@ -17,7 +17,7 @@ describe('LINKED LIST', () => {
     expect(list.head).to.eq(null);
   });
 
-  describe('UNSHIFT', () => {
+  describe.skip('UNSHIFT', () => {
     it('should add items to front of list / head', () => {
       list.unshift('duck');
       expect(list.length).to.equal(1)
@@ -30,7 +30,7 @@ describe('LINKED LIST', () => {
     })
   })
 
-  describe('SHIFT', () => {
+  describe.skip('SHIFT', () => {
     it('should return null if nothing in the list', () => {
       let result = list.shift();
 
@@ -71,7 +71,7 @@ describe('LINKED LIST', () => {
     })
   })
 
-  describe('PUSH', () => {
+  describe.skip('PUSH', () => {
     it('should push a single element to a list', () => {
       list.push('duck');
       expect(list.head.data).to.eq('duck');
@@ -111,7 +111,7 @@ describe('LINKED LIST', () => {
     });
   });
 
-  describe('POP', () => {
+  describe.skip('POP', () => {
     it('should return null if nothing in list', () => {
       expect(list.length).to.eq(0);
       expect(list.pop()).to.eq(null);
@@ -167,7 +167,7 @@ describe('LINKED LIST', () => {
       });
   });
 
-  describe('FIND', () => {
+  describe.skip('FIND', () => {
     beforeEach(() => {
       list.push('oh');
       list.push('hello');
@@ -188,7 +188,7 @@ describe('LINKED LIST', () => {
     });
   });
 
-  describe('DELETE', () => {
+  describe.skip('DELETE', () => {
     it('deletes a solo node', () => {
       list.push('hello');
       list.delete('hello');
@@ -245,7 +245,7 @@ describe('LINKED LIST', () => {
     })
   });
 
-  describe('TO ARRAY', () => {
+  describe.skip('TO ARRAY', () => {
     it('converts to an array', () => {
       expect(list.toArray()).to.deep.equal([]);
     });
@@ -264,7 +264,7 @@ describe('LINKED LIST', () => {
     });
   });
 
-  describe('INCLUDES', () => {
+  describe.skip('INCLUDES', () => {
     beforeEach(() => {
       list.push('The');
       list.push('rain');
@@ -281,7 +281,7 @@ describe('LINKED LIST', () => {
     });
   });
 
-  describe('INDEX', () => {
+  describe.skip('INDEX', () => {
     beforeEach(() => {
       list.push('oh');
       list.push('hello');
@@ -295,7 +295,7 @@ describe('LINKED LIST', () => {
     });
   });
 
-  describe('INSERT', () => {
+  describe.skip('INSERT', () => {
     beforeEach(() => {
       list.push('dark');
       list.push('stormy');
@@ -310,7 +310,7 @@ describe('LINKED LIST', () => {
     });
   });
 
-  describe('INSERT AFTER', () => {
+  describe.skip('INSERT AFTER', () => {
     beforeEach(() => {
       list.push('dark');
       list.push('stormy');
@@ -325,7 +325,7 @@ describe('LINKED LIST', () => {
     });
   });
 
-  describe('DISTANCE', () => {
+  describe.skip('DISTANCE', () => {
     beforeEach(() => {
       list.push("hello")
       list.push("pizza")
