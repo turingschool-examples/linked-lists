@@ -295,7 +295,7 @@ describe('LINKED LIST', () => {
     });
   });
 
-  describe.skip('INSERT', () => {
+  describe('INSERT', () => {
     beforeEach(() => {
       list.push('dark');
       list.push('stormy');
@@ -304,9 +304,10 @@ describe('LINKED LIST', () => {
     it('should insert nodes', () => {
       expect(list.length).to.eq(2);
       list.insert(1, 'and');
-      list.insert(3, 'night');
-      expect(list.length).to.eq(4);
-      expect(list.toArray()).to.deep.equal(['dark', 'and', 'stormy', 'night']);
+      list.insert(1, 'fun');
+      list.insert(4, 'night');
+      expect(list.length).to.eq(5);
+      expect(list.toArray()).to.deep.equal(['dark', 'fun', 'and', 'stormy', 'night']);
     });
   });
 

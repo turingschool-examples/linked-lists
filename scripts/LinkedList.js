@@ -78,4 +78,19 @@ export default class LinkedList {
 
     return array;
   }
+
+  insert(position, data) {
+    let node = new Node(data);
+    let currNode = this.head;
+    let currPos = 0;
+
+    while(currPos < position - 1) {
+      currNode = currNode.next;
+      currPos++;
+    }
+
+    node.next = currNode.next;
+    currNode.next = node;
+    this.length++;
+  }
 }
