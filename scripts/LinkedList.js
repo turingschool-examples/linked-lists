@@ -24,4 +24,39 @@ export default class LinkedList {
       currNode.next = new Node(data);
     }
   }
+
+  pop() {
+    // if (this.length === 0) {
+    let currNode = this.head;
+    let prevNode;
+
+    if (!this.head) {
+      return null;
+    }
+
+    while(currNode.next) {
+      prevNode = currNode;
+      currNode = currNode.next;
+    }
+
+    if (this.length === 1) {
+      this.head = null;
+
+    } else {
+      prevNode.next = null;
+    }
+    
+    this.length--;
+
+    return currNode;
+  }
 }
+
+
+
+
+
+
+
+
+
