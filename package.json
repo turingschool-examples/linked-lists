@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register tests"
+    "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register tests"
   },
   "keywords": [],
   "author": "",
