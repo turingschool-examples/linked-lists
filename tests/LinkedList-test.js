@@ -1,5 +1,4 @@
 import { expect } from 'chai';
-import Node from '../scripts/Node'
 import LinkedList from '../scripts/LinkedList'
 
 describe('LINKED LIST', () => {
@@ -71,7 +70,7 @@ describe('LINKED LIST', () => {
     })
   })
 
-  describe.skip('PUSH', () => {
+  describe('PUSH', () => {
     it('should push a single element to a list', () => {
       list.push('duck');
       expect(list.head.data).to.eq('duck');
