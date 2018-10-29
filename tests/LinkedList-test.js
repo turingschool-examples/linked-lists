@@ -17,60 +17,6 @@ describe('LINKED LIST', () => {
     expect(list.head).to.eq(null);
   });
 
-  describe.skip('UNSHIFT', () => {
-    it('should add items to front of list / head', () => {
-      list.unshift('duck');
-      expect(list.length).to.equal(1)
-      expect(list.head.data).to.equal('duck')
-
-      list.unshift('goose');
-      expect(list.length).to.equal(2)
-      expect(list.head.data).to.equal('goose')
-      expect(list.head.next.data).to.equal('duck')
-    })
-  })
-
-  describe.skip('SHIFT', () => {
-    it('should return null if nothing in the list', () => {
-      let result = list.shift();
-
-      expect(result).to.equal(null)
-    })
-
-    it('should return the first item in the list', () => {
-      list.unshift('duck');
-
-      expect(list.head.data).to.equal('duck');
-
-      let result = list.shift();
-
-      expect(result.data).to.equal('duck');
-    })
-
-    it('should remove items from the front of list / head', () => {
-
-      list.unshift('duck');
-      list.unshift('goose');
-      expect(list.head.data).to.equal('goose');
-      expect(list.head.next.data).to.equal('duck');
-
-      // remove goose from list
-      let result = list.shift();
-      expect(result.data).to.equal('goose')
-
-      // duck should now be back at the start of the list
-      expect(list.head.data).to.equal('duck')
-
-      // remove duck from list
-      result = list.shift();
-
-      expect(result.data).to.equal('duck')
-
-      // no more items in our list
-      expect(list.head).to.equal(null)
-    })
-  })
-
   describe.skip('PUSH', () => {
     it('should push a single element to a list', () => {
       list.push('duck');
@@ -165,27 +111,6 @@ describe('LINKED LIST', () => {
         expect(output3.next).to.eq(null);
         expect(list.length).to.eq(0);
       });
-  });
-
-  describe.skip('FIND', () => {
-    beforeEach(() => {
-      list.push('oh');
-      list.push('hello');
-      list.push('world');
-    });
-
-    it('should return the node if it is found', () => {
-      const result = list.find('hello');
-
-      expect(result.data).to.eq('hello');
-      expect(result.next.data).to.eq('world');
-    });
-
-    it('should return null if node is missing', () => {
-      const result = list.find("nope");
-
-      expect(result).to.eq(null);
-    });
   });
 
   describe.skip('DELETE', () => {
@@ -310,36 +235,4 @@ describe('LINKED LIST', () => {
     });
   });
 
-  describe.skip('INSERT AFTER', () => {
-    beforeEach(() => {
-      list.push('dark');
-      list.push('stormy');
-    });
-
-    it('should insert nodes after other nodes', () => {
-      expect(list.length).to.eq(2);
-      list.insertAfter('dark', 'and');
-      list.insertAfter('stormy', 'night');
-      expect(list.length).to.eq(4);
-      expect(list.toArray()).to.deep.equal(['dark', 'and', 'stormy', 'night']);
-    });
-  });
-
-  describe.skip('DISTANCE', () => {
-    beforeEach(() => {
-      list.push("hello")
-      list.push("pizza")
-      list.push("world")
-      list.push("today")
-      list.push("tomorrow")
-    });
-
-    it('should calculate distance between nodes', () => {
-      expect(list.distance("hello", "today")).to.eq(3);
-      expect(list.distance("pizza", "today")).to.eq(2);
-      expect(list.distance("hello", "world")).to.eq(2);
-      expect(list.distance("hello", "tomorrow")).to.eq(4);
-      expect(list.distance("world", "today")).to.eq(1);
-    });
-  });
 });
