@@ -99,16 +99,17 @@ describe('LINKED LIST', () => {
 
         const output = list.pop();
         expect(output.data).to.eq('swan');
+        expect(list.head.next.next).to.eq(null);
         expect(list.length).to.eq(2);
 
         const output2 = list.pop();
         expect(output2.data).to.eq('goose');
-        expect(output2.next).to.eq(null);
+        expect(list.head.next).to.eq(null);
         expect(list.length).to.eq(1);
 
         const output3 = list.pop();
         expect(output3.data).to.eq('duck');
-        expect(output3.next).to.eq(null);
+        expect(list.head).to.eq(null);
         expect(list.length).to.eq(0);
       });
   });
